@@ -1,3 +1,4 @@
+#Exercise 1 : Parsing HTML with BeautifulSoup
 from bs4 import BeautifulSoup
 
 with open("test.html", "r") as file:
