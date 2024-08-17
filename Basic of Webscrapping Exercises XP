@@ -1,0 +1,17 @@
+from bs4 import BeautifulSoup
+
+with open("test.html", "r") as file:
+    soup = BeautifulSoup(file, "html.parser")
+
+title = soup.title.string
+print("Title:", title)
+
+paragraphs = soup.find_all('p')
+print("\nParagraphs:")
+for para in paragraphs:
+    print(para.get_text())
+
+links = soup.find_all('a')
+print("\nLinks:")
+for link in links:
+    print(link.get('href'))
